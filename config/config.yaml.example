@@ -1,0 +1,61 @@
+# =============================================================================
+# Stock Screener Configuration (EXAMPLE)
+# =============================================================================
+
+# API Configuration
+api:
+  gemini_api_key: "YOUR_GEMINI_API_KEY_HERE"
+
+# Model Configuration
+models:
+  base_model: "gemini-2.5-flash"
+  temperature: 0.3
+  max_tokens: 10000
+  timeout: 600  # seconds
+
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 7778
+  log_level: "info"
+
+# Redis Configuration
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+  conversation_ttl: 3600  # 1 hour TTL for conversations
+  screening_ttl: 86400    # 24 hours TTL for screening results
+
+# Data Configuration
+data:
+  data_dir: "data"
+  company_master_file: "company_master.csv"
+  income_statements_file: "company_income_statements.csv"
+  metrics_daily_file: "company_metrics_daily.csv"
+  market_data_file: "market_data_daily.csv"
+  summary_file: "financial_data_summary.txt"
+
+# File Search Store Configuration
+file_search:
+  store_name: "financial-data-store"
+  upload_timeout: 120  # seconds to wait for upload completion
+  poll_interval: 5     # seconds between status checks
+
+# Gateway Configuration
+gateway:
+  port: 8001
+  upstream_url: "http://localhost:8000"
+  api_keys:
+    - key: "YOUR_API_KEY_HERE"
+      consumer_id: "default"
+      name: "Default Consumer"
+  admin_key: "YOUR_ADMIN_KEY_HERE"
+  rate_limit:
+    requests_per_minute: 100
+    window_seconds: 60
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

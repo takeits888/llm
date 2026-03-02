@@ -1,0 +1,39 @@
+# Virtual Environment
+kp-env/
+*-env/
+venv/
+.venv/
+
+# Data files (CSV, DB)
+data/*.csv
+data/*.db
+data/*.txt
+
+# Config with sensitive info
+config/config.yaml
+
+# Runtime files
+.service_pids
+*.pid
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
