@@ -117,11 +117,6 @@ kp/
 ├── config/
 │   └── config.yaml                 # API 키, 모델, 서버, Redis 등 전체 설정
 ├── data/
-│   ├── company_master.csv          # 기업 기본정보 (142개사)
-│   ├── company_metrics_daily.csv   # 일간 지표 (Price, Market Cap, Beta 등)
-│   ├── company_income_statements.csv # 손익계산서 (Revenue, EPS 등)
-│   ├── market_data_daily.csv       # OHLCV 시세 데이터 (45,958건)
-│   └── financial_data.db           # SQLite DB (자동 생성)
 ├── gateway/
 │   └── kong_gateway.py             # API 게이트웨이 (인증/제한/프록시)
 ├── mcp_filesearch_server/
@@ -301,3 +296,4 @@ python stop_services.py
 | `redis` | `screening_ttl` | `86400` | 스크리닝 결과 TTL(초) |
 | `gateway` | `port` | `8001` | 게이트웨이 포트 |
 | `gateway` | `rate_limit` | `100/60s` | 요청 제한 (분당) |
+
